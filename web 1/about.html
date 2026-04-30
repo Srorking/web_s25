@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عن الدليل - دليل فعاليات الجامعة الافتراضية السورية</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<!-- Google Fonts for Arabic -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- Header with Navbar -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">دليل الفعاليات</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+<li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+<li class="nav-item"><a class="nav-link active" href="about.html">عن الدليل</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+<li class="nav-item">
+<button onclick="toggleDark()" class="btn btn-warning btn-sm" title="تبديل الوضع">🌙</button>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+<main class="container py-5">
+
+<!-- About Section -->
+<section class="mb-5">
+<h2 class="mb-4">عن منصة دليل الفعاليات</h2>
+<p class="lead">
+يهدف موقعنا إلى تسهيل معرفة فعاليات الجامعة الافتراضية السورية وتوفير تجربة سهلة وممتعة للطلاب للوصول إلى أحدث الفعاليات والنشاطات المقامة في الجامعة.
+</p>
+<p>
+نؤمن بأن الفعاليات الجامعية تلعب دوراً vitalاً في تطوير مهارات الطلاب الاجتماعية والثقافية والمهنية، لذلك نسعى دائماً لتقديم منصة شاملة ومحدثة لجميع الفعاليات.
+</p>
+</section>
+
+<!-- Vision & Mission -->
+<section class="row mb-5">
+<div class="col-md-6 mb-3">
+<div class="card h-100">
+<div class="card-body">
+<h4 class="card-title">رؤيتنا</h4>
+<p class="card-text">أن نكون المنصة الرائدة في مجال الإعلام الجامعي للفعاليات والنشاطات الجامعية في سوريا.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<div class="card h-100">
+<div class="card-body">
+<h4 class="card-title">رسالتنا</h4>
+<p class="card-text">توفير منصة موحدة وشاملة لجميع الفعاليات الجامعية لتسهيل وصول الطلاب إليها.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Team Section -->
+<section class="mb-5">
+<h3 class="mb-4">فريق العمل</h3>
+<div class="row">
+
+<div class="col-md-3 col-6 mb-3">
+<div class="card text-center h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍💻</div>
+<h5>محمد عبد القادر ديبرة</h5>
+<p class="text-muted">Frontend Developer</p>
+<p class="small">مسؤول عن هيكل الصفحات وHTML</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6 mb-3">
+<div class="card text-center h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍💻</div>
+<h5>إبراهيم ناصر سرور</h5>
+<p class="text-muted">JavaScript Developer</p>
+<p class="small">مسؤول عن المنطق والتفاعلية</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6 mb-3">
+<div class="card text-center h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍💻</div>
+<h5>محمد ماهر السيناوي</h5>
+<p class="text-muted">UI/UX Designer</p>
+<p class="small">مسؤول عن التصميم وCSS</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6 mb-3">
+<div class="card text-center h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍🔧</div>
+<h5>محمد بكار</h5>
+<p class="text-muted">QA Tester</p>
+<p class="small">مسؤول عن الاختبار والمحتوى</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Policies Section -->
+<section class="mb-5">
+<h3 class="mb-4">سياسات النشر</h3>
+<div class="card">
+<div class="card-body">
+<h5>معايير نشر الفعاليات</h5>
+<ul class="mb-3">
+<li>يجب أن تكون الفعالية مرتبطة بالجامعة الافتراضية السورية</li>
+<li>يجب أن تحمل قيمة تعليمية أو ترفيهية للطلاب</li>
+<li>يجب أن تحتوي على معلومات دقيقة ومحدثة</li>
+<li>يُمنع نشر فعاليات ذات محتوى غير لائق</li>
+<li>يُشترط الحصول على موافقة الجهات المختصة</li>
+</ul>
+<h5>كيفية تقديم فعالية</h5>
+<p>للتقديم، يرجى ملء النموذج في صفحة "اتصل بنا" معmention تفاصيل الفعالية المطلوبة.</p>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-3">
+<h5>تواصل معنا</h5>
+<p>Email: msrwr675@gmail.com</p>
+</div>
+<div class="col-md-4 mb-3">
+<h5>روابط سريعة</h5>
+<ul class="list-unstyled">
+<li><a class="text-white" href="index.html">الرئيسية</a></li>
+<li><a class="text-white" href="events.html">الفعاليات</a></li>
+<li><a class="text-white" href="about.html">عن الدليل</a></li>
+</ul>
+</div>
+<div class="col-md-4 mb-3">
+<h5>تابعنا</h5>
+<p>Facebook | Instagram | Twitter</p>
+</div>
+</div>
+<hr>
+<p class="mb-0">© 2026 - دليل الفعاليات - الجامعة الافتراضية السورية</p>
+</div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="topBtn" class="btn btn-primary" onclick="scrollToTop()">↑</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

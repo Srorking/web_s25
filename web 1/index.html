@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الرئيسية - دليل فعاليات الجامعة الافتراضية Syrian Virtual University</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<!-- Google Fonts for Arabic -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- Header with Navbar -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">دليل الفعاليات</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+<li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+<li class="nav-item">
+<button onclick="toggleDark()" class="btn btn-warning btn-sm" title="تبديل الوضع">🌙</button>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+<main>
+
+<!-- Hero Section with Slider -->
+<div class="container py-5">
+<h3 class="section-title">فعاليات هذا الأسبوع</h3>
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="assets/img/chess.jpg" class="d-block w-100" alt="بطولة الشطرنج">
+<div class="carousel-caption d-none d-md-block">
+<h5>بطولة الشطرنج</h5>
+<p>فعالية ثقافية لتنمية مهارات التفكير</p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="assets/img/hackathon.jpg" class="d-block w-100" alt="هاكاثون برمجي">
+<div class="carousel-caption d-none d-md-block">
+<h5>هاكاثون برمجي</h5>
+<p>فعالية تقنية للابتكار والتطوير</p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="assets/img/robot.jpg" class="d-block w-100" alt="مسابقة الروبوت">
+<div class="carousel-caption d-none d-md-block">
+<h5>مسابقة الروبوت</h5>
+<p>فعالية تقنية تجمع الطلاب المبدعين</p>
+</div>
+</div>
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">السابق</span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">التالي</span>
+</button>
+</div>
+</div>
+
+<!-- Categories Section -->
+<div class="container py-4">
+<h4 class="section-title">التصنيفات</h4>
+<div class="d-flex flex-wrap gap-2">
+<span class="badge bg-primary">برمجة</span>
+<span class="badge bg-success">رياضة</span>
+<span class="badge bg-warning text-dark">ثقافة</span>
+<span class="badge bg-info">موسيقى</span>
+<span class="badge bg-secondary">عائلي</span>
+</div>
+</div>
+
+<!-- Latest Events Section -->
+<div class="container py-5">
+<h4 class="section-title">أحدث الفعاليات</h4>
+
+<div class="row g-4">
+
+<!--_card_1 -->
+<div class="col-md-4 col-sm-6">
+<div class="card h-100">
+<img src="assets/img/books.jpg" class="card-img-top" alt="نادي القراءة">
+<div class="card-body">
+<h5 class="card-title">نادي القراءة</h5>
+<p class="text-muted mb-2">📍 دمشق | 📅 15/6/2026</p>
+<p class="card-text">جلسة ثقافية لتنمية حب القراءة لدى الطلاب.</p>
+<a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
+</div>
+</div>
+</div>
+
+<!--_card_2 -->
+<div class="col-md-4 col-sm-6">
+<div class="card h-100">
+<img src="assets/img/basket.jpg" class="card-img-top" alt="كرة السلة">
+<div class="card-body">
+<h5 class="card-title">كرة السلة</h5>
+<p class="text-muted mb-2">📍 دمشق | 📅 1/6/2026</p>
+<p class="card-text">بطولة رياضية لتعزيز روح المنافسة.</p>
+<a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
+</div>
+</div>
+</div>
+
+<!--_card_3 -->
+<div class="col-md-4 col-sm-6">
+<div class="card h-100">
+<img src="assets/img/hackathon.jpg" class="card-img-top" alt="هاكاثون">
+<div class="card-body">
+<h5 class="card-title">هاكاثون برمجي</h5>
+<p class="text-muted mb-2">📍 دمشق | 📅 10/6/2026</p>
+<p class="card-text">فعالية تقنية لتطوير حلول مبتكرة.</p>
+<a href="event.html" class="btn btn-primary btn-sm">التفاصيل</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Call to Action -->
+<div class="container py-4 text-center">
+<div class="card bg-primary text-white">
+<div class="card-body">
+<h4>هل تريد استكشاف جميع الفعاليات؟</h4>
+<p class="mb-3">تصفح كامل الفعاليات المتاحة في الجامعة الافتراضية Syrian Virtual University</p>
+<a href="events.html" class="btn btn-light btn-lg">تصفح الكل</a>
+</div>
+</div>
+</div>
+
+<!-- فريق العمل -->
+<div class="container py-5">
+<h4 class="section-title">فريق العمل</h4>
+<div class="row g-4 text-center">
+
+<div class="col-md-3 col-6">
+<div class="card h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍💻</div>
+<h6>محمد عبد القادر ديبرة</h6>
+<p class="text-muted small">ID: 196930</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="card h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍💻</div>
+<h6>ابراهيم ناصر سرور</h6>
+<p class="text-muted small">ID: 288633</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="card h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍💻</div>
+<h6>محمد ماهر السيناوي</h6>
+<p class="text-muted small">ID: 298360</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-6">
+<div class="card h-100">
+<div class="card-body">
+<div class="team-icon mb-2">👨‍🔧</div>
+<h6>محمد بكار</h6>
+<p class="text-muted small">ID: 297171</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-4 mb-3">
+<h5>تواصل معنا</h5>
+<p>Email: msrwr675@gmail.com</p>
+</div>
+<div class="col-md-4 mb-3">
+<h5>روابط سريعة</h5>
+<ul class="list-unstyled">
+<li><a class="text-white" href="index.html">الرئيسية</a></li>
+<li><a class="text-white" href="events.html">الفعاليات</a></li>
+<li><a class="text-white" href="about.html">عن الدليل</a></li>
+</ul>
+</div>
+<div class="col-md-4 mb-3">
+<h5>تابعنا</h5>
+<p>Facebook | Instagram | Twitter</p>
+</div>
+</div>
+<hr>
+<p class="mb-0">© 2026 - دليل الفعاليات - الجامعة الافتراضية Syrian Virtual University</p>
+</div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="topBtn" class="btn btn-primary" onclick="scrollToTop()">↑</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
