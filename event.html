@@ -47,31 +47,17 @@
 <!-- Event Details -->
 <div class="row">
 <div class="col-md-8">
-<h2 class="mb-4">بطولة الشطرنج</h2>
+<h2 class="mb-4" id="eventTitle"></h2>
 
-<p class="text-muted">
-<strong>📍 المكان:</strong> Damascus<br>
-<strong>📅 التاريخ:</strong> 5/6/2026<br>
-<strong>🏷️ التصنيف:</strong> <span class="badge bg-warning text-dark">ثقافة</span>
-</p>
+<p class="text-muted" id="eventInfo"></p>
 
 <!-- Main Image -->
-<img src="assets/img/chess.jpg" class="img-fluid rounded mb-4" alt="بطولة الشطرنج">
+ <img id="eventImage" class="img-fluid rounded mb-4">
 
 <!-- Description -->
 <h4 class="mt-4 mb-3">وصف الفعالية</h4>
-<p>
-بطولة فكرية تنظمها الجامعة الافتراضية Syrian Virtual University لتطوير مهارات التفكير الاستراتيجي والتحليل لدى الطلاب ضمن بيئة تنافسية تعليمية.
-</p>
-<p>
-تهدف هذه الفعالية إلى:
-</p>
-<ul class="mb-4">
-<li>تنمية مهارات التفكير الاستراتيجي</li>
-<li>تعزيز روح المنافسة الصحية</li>
-<li>تواصل الطلاب وتبادل الخبرات</li>
-<li>اكتشاف المواهب الناشئة</li>
-</ul>
+
+<p id="eventDescription"></p>
 
 <!-- Action Buttons -->
 <div class="d-flex flex-wrap gap-2 mb-5">
@@ -98,9 +84,9 @@
 <div class="card-body">
 <h5>معلومات سريعة</h5>
 <hr>
-<p><strong>🕕 الوقت:</strong> 10:00 ص</p>
-<p><strong>👥 العدد:</strong> 50 مشارك</p>
-<p><strong>💰 السعر:</strong> مجاني</p>
+<p><strong>🕕 الوقت:</strong> <span id="eventTime">10:00 ص</span></p>
+<p><strong>👥 العدد:</strong> <span id="eventParticipants">50 مشارك</span></p>
+<p><strong>💰 السعر:</strong> <span id="eventPrice">مجاني</span></p>
 </div>
 </div>
 
@@ -117,7 +103,7 @@
 <div class="card-body">
 <h6>هاكاثون برمجي</h6>
 <p class="text-muted small">📅 10/6/2026</p>
-<a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+<a href="event.html?id=2" class="btn btn-sm btn-outline-primary">التفاصيل</a>
 </div>
 </div>
 </div>
@@ -128,7 +114,7 @@
 <div class="card-body">
 <h6>مسابقة الروبوت</h6>
 <p class="text-muted small">📅 15/6/2026</p>
-<a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+<a href="event.html?id=4" class="btn btn-sm btn-outline-primary">التفاصيل</a>
 </div>
 </div>
 </div>
@@ -139,7 +125,7 @@
 <div class="card-body">
 <h6>نادي القراءة</h6>
 <p class="text-muted small">📅 15/6/2026</p>
-<a href="event.html" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+<a href="event.html?id=5" class="btn btn-sm btn-outline-primary">التفاصيل</a>
 </div>
 </div>
 </div>
@@ -183,15 +169,91 @@
 <script src="assets/js/main.js"></script>
 
 <script>
+// Event data
+const events = {
+    1: {
+        title: "بطولة كرة السلة",
+        category: "رياضة",
+        date: "1/6/2026",
+        location: "دمشق",
+        image: "basket.jpg",
+        description: "بطولة رياضية تنظمها الجامعة الافتراضية Syrian Virtual University لتعزيز روح المنافسة.",
+        time: "10:00 ص",
+        participants: "50 مشارك",
+        price: "مجاني"
+    },
+    2: {
+        title: "هاكاثون برمجي",
+        category: "تقنية",
+        date: "10/6/2026",
+        location: "دمشق",
+        image: "hackathon.jpg",
+        description: "فعالية تقنية تجمع الطلاب لتطوير حلول مبتكرة بإشراف الجامعة.",
+        time: "10:00 ص",
+        participants: "50 مشارك",
+        price: "مجاني"
+    },
+    3: {
+        title: "بطولة الشطرنج",
+        category: "ثقافة",
+        date: "5/6/2026",
+        location: "دمشق",
+        image: "chess.jpg",
+        description: "بطولة فكرية لتعزيز مهارات التفكير والتحليل لدى الطلاب.",
+        time: "10:00 ص",
+        participants: "50 مشارك",
+        price: "مجاني"
+    },
+    4: {
+        title: "مسابقة الروبوت",
+        category: "تقنية",
+        date: "15/6/2026",
+        location: "دمشق",
+        image: "robot.jpg",
+        description: "مسابقة تقنية لتصميم وبرمجة الروبوتات.",
+        time: "10:00 ص",
+        participants: "50 مشارك",
+        price: "مجاني"
+    },
+    5: {
+        title: "نادي القراءة",
+        category: "ثقافة",
+        date: "15/6/2026",
+        location: "دمشق",
+        image: "books.jpg",
+        description: "جلسة ثقافية لتنمية حب القراءة.",
+        time: "10:00 ص",
+        participants: "50 مشارك",
+        price: "مجاني"
+    }
+};
+
+// Get URL parameter
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+
+// Populate event details
+if (id && events[id]) {
+    const event = events[id];
+    document.getElementById('eventTitle').textContent = event.title;
+    document.getElementById('eventInfo').textContent = `التصنيف: ${event.category} | التاريخ: ${event.date} | الموقع: ${event.location}`;
+    document.getElementById('eventImage').src = `assets/img/${event.image}`;
+    document.getElementById('eventDescription').textContent = event.description;
+    document.getElementById('eventTime').textContent = event.time;
+    document.getElementById('eventParticipants').textContent = event.participants;
+    document.getElementById('eventPrice').textContent = event.price;
+}
+
 // دوال خاصة بصفحة التفاصيل
 function addToCalendar() {
     alert("✓ تم إضافة الفعالية إلى تقويمك!");
 }
 
 function shareEvent() {
+    const eventTitle = id && events[id] ? events[id].title : 'بطولة الشطرنج';
     if (navigator.share) {
         navigator.share({
-            title: 'بطولة الشطرنج',
+            title: eventTitle,
             text: 'شاهد هذه الفعالية الرائعة!',
             url: window.location.href
         });
@@ -209,6 +271,5 @@ function confirmBooking() {
     alert("✓ تم الحجز بنجاح! سنرسل لك تأكيداً عبر البريد الإلكتروني.");
 }
 </script>
-
 </body>
 </html>
